@@ -1,23 +1,19 @@
-import { useState } from 'react'
-import PhoneList from './components/PhoneList/PhoneList'
 import NavBar from './components/NavBar/NavBar'
+import PhoneList from './views/PhoneList'
 import "./App.css"
-import SearchBar from './components/SearchBar/SearchBar'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 
-function App() {
-  const [searchQuery, setSearchQuery] = useState('');
-
+const App = () => {
   return (
-    <>
-      <div className="App">
-        <NavBar setSearchQuery={setSearchQuery} ></NavBar>
+    <Router>
+      <NavBar />
+      <div className="main-content">
         <Routes>
-          <Route path="/" element={<PhoneList searchQuery={searchQuery} />} />
+          <Route path="/" element={<PhoneList />} /> 
         </Routes>
       </div>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
