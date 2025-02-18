@@ -2,7 +2,7 @@ import React from 'react';
 import PhoneList from '../components/PhoneList/PhoneList';
 import SearchBar from '../components/SearchBar/SearchBar';
 
-const Home = () => {
+const PhoneListView = () => {
   return (
     <div>
       <SearchBar /> {/* Barra de búsqueda */}
@@ -11,4 +11,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default PhoneListView;
