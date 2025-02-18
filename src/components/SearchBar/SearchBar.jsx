@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SearchBar.css'
 
-const SearchBar = ({ setSearchQuery }) => {
+const SearchBar = ({ setSearchQuery, totalPhones }) => {
   const [query, setQuery] = useState('');
 
   // Maneja el cambio en el campo de búsqueda
@@ -21,6 +21,7 @@ const SearchBar = ({ setSearchQuery }) => {
           placeholder="Search for a smartphone..." 
         />
       </div>
+      <p className='total-phones'>{totalPhones} RESULTS</p>
     </div>
     
   );

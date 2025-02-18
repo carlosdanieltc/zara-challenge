@@ -12,7 +12,6 @@
 .search-bar {
     display: flex;
     border-bottom: 1px solid #000;
-    margin-bottom: 2rem; /* Solo borde inferior */
   }
   
 .search-input {
@@ -20,4 +19,8 @@
     padding: 1%; /* Relleno dentro de la caja de texto */
     border: none; /* Sin bordes por defecto */
     outline: none; /* Elimina el contorno al hacer foco */
+}
+
+.total-phones{
+  padding-left: 1rem;
 }
