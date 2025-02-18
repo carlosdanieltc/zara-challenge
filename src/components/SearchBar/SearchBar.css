@@ -1,16 +1,22 @@
+.search-bar-container{
+  height: 10rem;
+  background-color: white;
+  position: fixed;
+  width: 90%;
+  top: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
 .search-bar {
     display: flex;
-    width: 89%; /* Ocupa todo el ancho de la pantalla */
-    height: 40px; /* Ajusta la altura según lo necesites */
-    border-bottom: 1px solid #000; /* Solo borde inferior */
-    position: fixed;
-    background-color: cadetblue;
-    top: 8rem;
-    background-color: white;
+    border-bottom: 1px solid #000;
+    margin-bottom: 2rem; /* Solo borde inferior */
   }
   
 .search-input {
-    width: 98%; /* La barra de búsqueda ocupará todo el ancho disponible */
+    width: 100%; 
     padding: 1%; /* Relleno dentro de la caja de texto */
     border: none; /* Sin bordes por defecto */
     outline: none; /* Elimina el contorno al hacer foco */

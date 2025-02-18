@@ -11,15 +11,18 @@ const SearchBar = ({ setSearchQuery }) => {
   };
 
   return (
-    <div className="search-bar">
-      <input 
-        type="text" 
-        className="search-input"
-        value={query} 
-        onChange={handleSearchChange} 
-        placeholder="Search for a smartphone..." 
-      />
+    <div className='search-bar-container'>
+      <div className="search-bar">
+        <input 
+          type="text" 
+          className="search-input"
+          value={query} 
+          onChange={handleSearchChange} 
+          placeholder="Search for a smartphone..." 
+        />
+      </div>
     </div>
+    
   );
 };
 
