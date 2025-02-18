@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PhoneCard from '../PhoneCard/PhoneCard';
 import './PhoneList.css'
 import SearchBar from '../SearchBar/SearchBar';
+import { Link } from 'react-router-dom';
 
 const PhoneList = () => {
   const [phones, setPhones] = useState([]); // Estado para almacenar los teléfonos filtrados
@@ -60,7 +61,9 @@ const PhoneList = () => {
       <SearchBar setSearchQuery={setSearchQuery} totalPhones={phones.length} />
       <div className="phone-grid">
         {phones.map(phone => (
-          <PhoneCard key={phone.id} phone={phone} />
+          <Link to={`/phone/${phone.id}`} key={phone.id}>
+            <PhoneCard phone={phone} />
+          </Link>
         ))}
       </div>
     </div>
