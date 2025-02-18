@@ -41,7 +41,7 @@ const PhoneList = () => {
 
   return (
     <div>
-      {/* <SearchBar setSearchQuery={setSearchQuery} /> */}
+      <SearchBar setSearchQuery={setSearchQuery} />
       <div className="phone-grid">
         {phones.map(phone => (
           <PhoneCard key={phone.id} phone={phone} />

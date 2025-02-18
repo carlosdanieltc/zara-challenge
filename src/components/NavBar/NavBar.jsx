@@ -14,8 +14,6 @@ const NavBar = ({ setSearchQuery }) => {  // Recibe setSearchQuery
 
   return (
     <nav className="navbar">
-      <header className="header-container">
-
         <Link to="/" className="logo-container">
           <img className='logo' src="../../src/assets/logo.png" alt="logo" />
         </Link>
@@ -24,8 +22,7 @@ const NavBar = ({ setSearchQuery }) => {  // Recibe setSearchQuery
           <img className='shopping-cart' src="../../src/assets/shopping-cart-icon.webp" alt="" />
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </Link>
-      </header>
-      <SearchBar setSearchQuery={setSearchQuery}></SearchBar>
+      {/* <SearchBar setSearchQuery={setSearchQuery}></SearchBar> */}
     </nav>
   );
 };

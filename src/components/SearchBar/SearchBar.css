@@ -1,9 +1,12 @@
 .search-bar {
     display: flex;
-    width: 98%; /* Ocupa todo el ancho de la pantalla */
+    width: 89%; /* Ocupa todo el ancho de la pantalla */
     height: 40px; /* Ajusta la altura según lo necesites */
-    padding: 0 10px; /* Espaciado en los laterales */
     border-bottom: 1px solid #000; /* Solo borde inferior */
+    position: fixed;
+    background-color: cadetblue;
+    top: 8rem;
+    background-color: white;
   }
   
 .search-input {
