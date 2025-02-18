@@ -11,6 +11,10 @@
   background-color: white;
 }
 
+.navbar-cart {
+  border-bottom: 1px solid black;
+}
+
 .logo-container{
   display: flex;
   align-items: center;

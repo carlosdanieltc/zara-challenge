@@ -9,6 +9,7 @@ const PhoneList = () => {
   const [searchQuery, setSearchQuery] = useState(''); // Estado para manejar el término de búsqueda
 
   useEffect(() => {
+    //todo esto en services
     const fetchPhones = async () => {
       try {
         const response = await fetch(`https://prueba-tecnica-api-tienda-moviles.onrender.com/products`, {
@@ -35,7 +36,7 @@ const PhoneList = () => {
     };
 
     fetchPhones();
-  }, []); // Solo se ejecuta cuando el componente se monta
+  }, []);
 
   // Implementación del debounce
   useEffect(() => {
