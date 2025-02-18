@@ -5,6 +5,8 @@
     overflow: hidden; /* Evitar la barra horizontal */
     margin-top: 15rem;
     margin-bottom: 6rem;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
 }
 
 /* Media query para pantallas más pequeñas */
