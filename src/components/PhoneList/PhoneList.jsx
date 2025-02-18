@@ -32,7 +32,7 @@ const PhoneList = () => {
         );
         setPhones(filteredPhones); // Mostrar los teléfonos filtrados
       }
-    }, 300); // 300 ms de retraso
+    }, 300); 
 
     return () => clearTimeout(delayDebounceFn); // Limpiar el timeout si se actualiza el searchQuery
   }, [searchQuery, allPhones]); // Dependencia de searchQuery y allPhones

@@ -1,0 +1,19 @@
+.phoneCardDetail{
+    background-color: aqua;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.phoneImgContainer{
+    background-color: blue;
+    width: 50%;
+    flex: 1;
+}
+
+.phoneInfo{
+    background-color: brown;
+    width: 50%;
+    flex: 1;
+}

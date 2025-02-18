@@ -57,6 +57,7 @@ html, body{
     background-color: azure ;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .button-pay{
@@ -64,4 +65,5 @@ html, body{
     margin-left: 2rem;
     color: white;
     background-color: black;
+    height: 100%;
 }

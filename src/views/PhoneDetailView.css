@@ -1,0 +1,12 @@
+.phone-detail-container{
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-back{
+    margin-top: 5rem;
+    width: 5%;
+    height: 30px;   
+}

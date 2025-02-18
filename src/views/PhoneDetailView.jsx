@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchPhoneDetail } from '../services/phoneService'; 
-import './PhoneDetailView.css'; 
+import { fetchPhoneDetail } from '../services/phoneService';
+import './PhoneDetailView.css';
+import PhoneCardDetail from '../components/PhoneCard/PhoneCardDetail'
 
 const PhoneDetailView = () => {
-  const { id } = useParams(); // Obtienes el id del teléfono desde la URL
-  console.log(`ID ES:${id}`)
+  const { id } = useParams();
   const [phoneDetail, setPhoneDetail] = useState(null); // Estado para almacenar los detalles del teléfono
   const [loading, setLoading] = useState(true); // Estado de carga para mostrar un cargando mientras obtenemos los datos
   const [error, setError] = useState(null); // Estado para manejar errores
@@ -13,36 +13,34 @@ const PhoneDetailView = () => {
   useEffect(() => {
     const getPhoneDetail = async () => {
       setLoading(true);
-      const data = await fetchPhoneDetail(id); // Llamada a la API para obtener el detalle del teléfono
+      const data = await fetchPhoneDetail(id);
       if (data) {
-        setPhoneDetail(data); // Guardamos los detalles en el estado
+        setPhoneDetail(data);
+        console.log(data)
       } else {
-        setError('No se pudieron obtener los detalles del teléfono'); // Si no se obtiene el detalle, mostramos un error
+        setError('No se pudieron obtener los detalles del teléfono');
       }
       setLoading(false);
     };
 
     getPhoneDetail();
-  }, [id]); // Solo se vuelve a ejecutar cuando cambia el id
+
+  }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Mostrar un mensaje de carga mientras obtenemos los datos
+    return <div>Loading...</div>;
   }
 
   if (error) {
-    return <div>{error}</div>; // Mostrar el error si no se pueden obtener los detalles
+    return <div>{error}</div>;
   }
 
   return (
     <div className="phone-detail-container">
       {phoneDetail && (
         <>
-          <h1>{phoneDetail.name}</h1>
-          <img src={phoneDetail.imageUrl} alt={phoneDetail.name} className="phone-detail-image" />
-          <p><strong>Brand:</strong> {phoneDetail.brand}</p>
-          <p><strong>Price:</strong> ${phoneDetail.price}</p>
-          <p><strong>Description:</strong> {phoneDetail.description}</p>
-          {/* Puedes agregar más detalles según la respuesta de la API */}
+          <button className='button-back'>Back</button>
+          <PhoneCardDetail phoneDetail={phoneDetail} />
         </>
       )}
     </div>
