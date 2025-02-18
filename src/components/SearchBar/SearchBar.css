@@ -1,0 +1,14 @@
+.search-bar {
+    display: flex;
+    width: 98%; /* Ocupa todo el ancho de la pantalla */
+    height: 40px; /* Ajusta la altura según lo necesites */
+    padding: 0 10px; /* Espaciado en los laterales */
+    border-bottom: 1px solid #000; /* Solo borde inferior */
+  }
+  
+.search-input {
+    width: 98%; /* La barra de búsqueda ocupará todo el ancho disponible */
+    padding: 1%; /* Relleno dentro de la caja de texto */
+    border: none; /* Sin bordes por defecto */
+    outline: none; /* Elimina el contorno al hacer foco */
+}

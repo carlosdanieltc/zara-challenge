@@ -1,0 +1,62 @@
+.phone-card{
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.img-container{
+    width: 80%; /* Las imágenes ocuparán el 80% del ancho del contenedor */
+    height: 100%; /* Altura del contenedor de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobrepase el contenedor */
+}
+
+.phone-image{
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
+    height: 150px; /* Establece una altura consistente para todas las imágenes */
+    object-fit: contain; /* Mantiene la proporción de la imagen sin deformarla y la recorta si es necesario */
+    /* background-color: aqua; */
+}
+
+.phone-info{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 0.9rem;
+}
+
+.phone-name-brand-container{
+    width: 70%;
+}
+
+.price-container{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.phone-brand{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.phone-name{
+    margin: 0;
+    padding: 0;
+}
