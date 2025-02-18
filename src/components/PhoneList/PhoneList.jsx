@@ -31,6 +31,7 @@ const PhoneList = () => {
 
         setAllPhones(limitedPhones); // Guardamos los teléfonos completos
         setPhones(limitedPhones); // Establecemos inicialmente los teléfonos limitados
+        console.log(limitedPhones)
       } catch (error) {
         console.error('Hubo un error al obtener los datos:', error);
       }
