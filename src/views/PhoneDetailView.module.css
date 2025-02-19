@@ -1,11 +1,11 @@
-.phone-detail-container{
+.phoneDetailContainer{
     width: 100%;
     background-color: blueviolet;
     display: flex;
     flex-direction: column;
 }
 
-.button-back{
+.buttonBack{
     margin-top: 5rem;
     width: 5%;
     height: 30px;   

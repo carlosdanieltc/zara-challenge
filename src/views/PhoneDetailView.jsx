@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { fetchPhoneDetail } from '../services/phoneService';
-import './PhoneDetailView.css';
+import styles from './PhoneDetailView.module.css';
 import PhoneCardDetail from '../components/PhoneCard/PhoneCardDetail'
 import PhoneSpecifications from '../components/PhoneSpecifications/PhoneSpecifications'
 
@@ -37,10 +37,12 @@ const PhoneDetailView = () => {
   }
 
   return (
-    <div className="phone-detail-container">
+    <div className={styles.phoneDetailContainer}>
       {phoneDetail && (
         <>
-          <button className='button-back'>Back</button>
+          <Link to="/">
+            <button className={styles.buttonBack}>Back</button>
+          </Link>
           <PhoneCardDetail phoneDetail={phoneDetail} />
           <PhoneSpecifications phoneDetail={phoneDetail}></PhoneSpecifications>
         </>

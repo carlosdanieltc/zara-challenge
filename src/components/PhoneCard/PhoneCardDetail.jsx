@@ -9,10 +9,17 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   const name = phoneDetail.name
   const basePrice = phoneDetail.basePrice
 
-  const [selectedColor, setSelectedColor] = useState(colorOptions[1].imageUrl);
+  const [selectedColor, setSelectedColor] = useState(colorOptions[0].imageUrl);
+  const [selectedStorage, setSelectedStorage] = useState(storageOptions[0].capacity);
+  const [selectedPrice, setSelectedPrice] = useState(storageOptions[0].price);
 
   const handleColorChange = (newColor) => {
     setSelectedColor(newColor);
+  };
+
+  const handleStorageChange = (storage, price) => {
+    setSelectedStorage(storage);
+    setSelectedPrice(price)
   };
 
   return (
@@ -22,12 +29,21 @@ const PhoneCardDetail = ({ phoneDetail }) => {
       </div>
       <div className={styles.phoneInfo}>
         <h1>{name}</h1>
-        <p>From {basePrice} EUR</p>
+        <p>From {selectedPrice} EUR</p>
         <p>STORAGE ¿HOW MUCH SPACE DO YOU NEED?</p>
 
         <div className={styles.storageContainer}>
           {storageOptions.map((item, index) => (
-            <button key={index} className={styles.storageButton}>{item.capacity}</button>
+            <label key={item.capacity} className={styles.storageOption}>
+              <input
+                type="radio"
+                name="storage" 
+                value={item.capacity}
+                checked={selectedStorage === item.capacity}
+                onChange={() => handleStorageChange(item.capacity, item.price)}
+              />
+              {item.capacity}
+            </label>
           ))}
         </div>
 
@@ -39,6 +55,7 @@ const PhoneCardDetail = ({ phoneDetail }) => {
                 type="radio"
                 name="color"
                 value={item.name}
+                checked= {selectedColor === item.imageUrl}
                 onChange={() => handleColorChange(item.imageUrl)} 
               />
             </label>
