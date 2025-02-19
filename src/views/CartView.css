@@ -51,6 +51,7 @@ html, body{
     width: 15rem;
     border: 1px solid black;
     background-color: white;
+    cursor: pointer;
 }
 
 .pay-container{
@@ -66,4 +67,5 @@ html, body{
     color: white;
     background-color: black;
     height: 100%;
+    cursor: pointer;
 }

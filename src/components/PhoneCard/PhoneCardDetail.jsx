@@ -48,16 +48,16 @@ const PhoneCardDetail = ({ phoneDetail }) => {
         </div>
 
         <p>COLOR. PICK YOUR FAVORITE</p>
-        <div className={styles.colorOptions}>
+        <div className={styles.colorOptionsContainer}>
           {colorOptions.map((item, index) => (
-            <label key={item.name} className={styles.colorOption}>
+            <label key={item.name} className={styles.colorOption} style={{ backgroundColor: item.hexCode }}>
               <input 
                 type="radio"
                 name="color"
                 value={item.name}
                 checked= {selectedColor === item.imageUrl}
                 onChange={() => handleColorChange(item.imageUrl)} 
-              />
+              />             
             </label>
           ))}
         </div>
