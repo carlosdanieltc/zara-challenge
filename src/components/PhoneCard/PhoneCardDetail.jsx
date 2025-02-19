@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './PhoneCardDetail.module.css'
+import { useCart } from '../../context/CartContext'
 import { useState } from 'react';
 
 const PhoneCardDetail = ({ phoneDetail }) => {
@@ -10,8 +11,10 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   const basePrice = phoneDetail.basePrice
 
   const [selectedColor, setSelectedColor] = useState(null);
-  const [selectedStorage, setSelectedStorage] = useState(null); //storageOptions[0].capacity
+  const [selectedStorage, setSelectedStorage] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState(storageOptions[0].price);
+
+  const { addPhoneToCart } = useCart();
 
   const handleColorChange = (newColor) => {
     setSelectedColor(newColor);
@@ -20,6 +23,18 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   const handleStorageChange = (storage, price) => {
     setSelectedStorage(storage);
     setSelectedPrice(price)
+  };
+
+  const handleAddToCart = () => {
+    if (selectedColor && selectedStorage) {
+      const selectedPhone = {
+        name,
+        price: selectedPrice,
+        color: selectedColor,
+        storage: selectedStorage,
+      };
+      addPhoneToCart(selectedPhone);
+    }
   };
 
   return (
@@ -65,7 +80,8 @@ const PhoneCardDetail = ({ phoneDetail }) => {
         </div>
         <button 
           className={styles.buttonAddToCart} 
-          disabled={!selectedColor || !selectedStorage}>
+          disabled={!selectedColor || !selectedStorage}
+          onClick={handleAddToCart}>
           AÑADIR
         </button>
       </div>
