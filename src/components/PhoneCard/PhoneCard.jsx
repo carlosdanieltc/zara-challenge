@@ -1,19 +1,19 @@
 import React from 'react';
-import './PhoneCard.css'
+import styles from './PhoneCard.module.css'
 
 const PhoneCard = ({ phone }) => {
   return (
-    <div className="phone-card">
-      <div className="img-container">
-        <img src={phone.imageUrl} alt={phone.name} className="phone-image" />
+    <div className={styles.phoneCard}>
+      <div className={styles.imgContainer}>
+        <img src={phone.imageUrl} alt={phone.name} className={styles.phoneImage} />
       </div>
-      <div className="phone-info">
-        <div className="phone-name-brand-container">         
-          <h3 className="phone-brand">{phone.brand}</h3>
-          <h4 className="phone-name">{phone.name}</h4>
+      <div className={styles.phoneInfo}>
+        <div className={styles.phoneNameBrandContainer}>         
+          <h3 className={styles.phoneBrand}>{phone.brand}</h3>
+          <h4 className={styles.phoneName}>{phone.name}</h4>
         </div>
-        <div className="price-container">
-          <p className="price">{`$${phone.basePrice}`}</p>
+        <div className={styles.priceContainer}>
+          <p className={styles.price}>{`$${phone.basePrice}`}</p>
         </div>
       </div>
     </div>

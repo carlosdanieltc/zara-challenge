@@ -1,19 +1,49 @@
 .phoneCardDetail{
     background-color: aqua;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
 }
 
 .phoneImgContainer{
     background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
-    flex: 1;
+}
+
+.image{
+    height: 28rem;
 }
 
 .phoneInfo{
     background-color: brown;
-    width: 50%;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 40%;
+    padding-left: 10%;
+}
+
+.storageContainer{
+    width: 70%;
+    height: 4rem;
+}
+
+.storageButton{
+    width: 33%;
+    height: 100%;
+}
+
+.colorOptions{
+    
+}
+
+.buttonAddToCart{
+    height: 3rem;
+    width: 80%;
+    margin-top: 2rem;
 }

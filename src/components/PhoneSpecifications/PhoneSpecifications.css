@@ -1,0 +1,30 @@
+.phone-specifications-container{
+    width: 100%;
+    background-color: chocolate;
+    box-sizing: border-box;
+    padding: 5%;
+    padding-top: 0;
+}
+
+.specifications-title{
+    font-size: 1.5rem;
+    background-color: aliceblue;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid black;
+}
+
+.data-title{
+    font-size: 1rem;
+    width: 30%;
+}
+
+.data{
+    width: 70%;
+}
+
+.specification{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchPhoneDetail } from '../services/phoneService';
 import './PhoneDetailView.css';
 import PhoneCardDetail from '../components/PhoneCard/PhoneCardDetail'
+import PhoneSpecifications from '../components/PhoneSpecifications/PhoneSpecifications'
 
 const PhoneDetailView = () => {
   const { id } = useParams();
@@ -41,6 +42,7 @@ const PhoneDetailView = () => {
         <>
           <button className='button-back'>Back</button>
           <PhoneCardDetail phoneDetail={phoneDetail} />
+          <PhoneSpecifications phoneDetail={phoneDetail}></PhoneSpecifications>
         </>
       )}
     </div>
