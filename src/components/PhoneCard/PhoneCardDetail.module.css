@@ -44,9 +44,10 @@
     /* transition: background 0.3s, color 0.3s; */
   }
 
-input{
+.inputPhone{
     display: none;
 }
+
 
 .colorOptionsContainer{
     width: 80%;
@@ -70,4 +71,9 @@ input{
     width: 80%;
     margin-top: 2rem;
     cursor: pointer;
+    border: none;
+}
+
+.selected {
+    outline: 2px solid black !important;
 }

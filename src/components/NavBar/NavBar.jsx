@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
-import SearchBar from '../SearchBar/SearchBar';
 
 const NavBar = () => {
   const [cartCount, setCartCount] = useState(0);

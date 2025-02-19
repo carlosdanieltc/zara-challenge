@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SearchBar.css'
+import styles from './SearchBar.module.css'
 
 const SearchBar = ({ setSearchQuery, totalPhones }) => {
   const [query, setQuery] = useState('');
@@ -11,17 +11,17 @@ const SearchBar = ({ setSearchQuery, totalPhones }) => {
   };
 
   return (
-    <div className='search-bar-container'>
-      <div className="search-bar">
+    <div className={styles.searchBarContainer}>
+      <div className={styles.SearchBar}>
         <input 
           type="text" 
-          className="search-input"
+          className={styles.searchInput}
           value={query} 
           onChange={handleSearchChange} 
           placeholder="Search for a smartphone..." 
         />
       </div>
-      <p className='total-phones'>{totalPhones} RESULTS</p>
+      <p className={styles.totalPhones}>{totalPhones} RESULTS</p>
     </div>
     
   );

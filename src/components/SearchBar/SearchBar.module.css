@@ -1,4 +1,4 @@
-.search-bar-container{
+.searchBarContainer{
   height: 10rem;
   background-color: white;
   position: fixed;
@@ -9,12 +9,12 @@
   flex-direction: column;
 }
 
-.search-bar {
+.SearchBar{
     display: flex;
     border-bottom: 1px solid #000;
   }
   
-.search-input {
+.searchInput{
     width: 100%; 
     padding: 1%; /* Relleno dentro de la caja de texto */
     border: none; /* Sin bordes por defecto */

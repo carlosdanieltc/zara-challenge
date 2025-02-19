@@ -9,8 +9,8 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   const name = phoneDetail.name
   const basePrice = phoneDetail.basePrice
 
-  const [selectedColor, setSelectedColor] = useState(colorOptions[0].imageUrl);
-  const [selectedStorage, setSelectedStorage] = useState(storageOptions[0].capacity);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedStorage, setSelectedStorage] = useState(null); //storageOptions[0].capacity
   const [selectedPrice, setSelectedPrice] = useState(storageOptions[0].price);
 
   const handleColorChange = (newColor) => {
@@ -25,7 +25,7 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   return (
     <div className={styles.phoneCardDetail}>
       <div className={styles.phoneImgContainer}>
-        <img className={styles.image} src={selectedColor} alt="" />
+        <img className={styles.image} src={selectedColor ?? colorOptions[0].imageUrl} alt="" />
       </div>
       <div className={styles.phoneInfo}>
         <h1>{name}</h1>
@@ -36,6 +36,7 @@ const PhoneCardDetail = ({ phoneDetail }) => {
           {storageOptions.map((item, index) => (
             <label key={item.capacity} className={styles.storageOption}>
               <input
+                className={styles.inputPhone}
                 type="radio"
                 name="storage" 
                 value={item.capacity}
@@ -52,6 +53,7 @@ const PhoneCardDetail = ({ phoneDetail }) => {
           {colorOptions.map((item, index) => (
             <label key={item.name} className={styles.colorOption} style={{ backgroundColor: item.hexCode }}>
               <input 
+                className={styles.inputPhone}
                 type="radio"
                 name="color"
                 value={item.name}
@@ -61,7 +63,9 @@ const PhoneCardDetail = ({ phoneDetail }) => {
             </label>
           ))}
         </div>
-        <button className={styles.buttonAddToCart}>
+        <button 
+          className={styles.buttonAddToCart} 
+          disabled={!selectedColor || !selectedStorage}>
           AÑADIR
         </button>
       </div>

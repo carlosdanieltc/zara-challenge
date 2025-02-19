@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 90%;
+  width: 91%;
   margin-left: 5%;
   margin-right: 5%;
   display: flex;
@@ -38,3 +38,5 @@
   height: 40%;
   width: auto;
 }
+
+
