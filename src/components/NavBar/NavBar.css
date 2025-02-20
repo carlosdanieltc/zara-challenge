@@ -32,6 +32,8 @@
   align-items: center;
   height: 100%;
   margin-right: 2%;
+  text-decoration: none;
+  color: inherit; 
 }
 
 .shopping-cart {

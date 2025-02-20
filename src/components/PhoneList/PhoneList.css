@@ -1,35 +1,39 @@
 .phone-grid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
-    width: 100%; /* Asegurarte que el contenedor ocupa todo el ancho */
-    overflow: hidden; /* Evitar la barra horizontal */
+    grid-template-columns: repeat(5, 1fr); 
+    width: 100%; 
+    overflow: hidden;
     margin-top: 15rem;
     margin-bottom: 6rem;
     border-left: 1px solid black;
     border-top: 1px solid black;
 }
 
-/* Media query para pantallas más pequeñas */
+.linkTo{
+    text-decoration: none;
+    color: inherit; 
+}
+
 @media (max-width: 1200px) {
     .phone-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas medianas */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 
 @media (max-width: 900px) {
     .phone-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas pequeñas */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .phone-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas muy pequeñas */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 400px) {
     .phone-grid {
-        grid-template-columns: 1fr; /* 1 columna para pantallas de móviles */
+        grid-template-columns: 1fr; 
     }
 }

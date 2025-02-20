@@ -5,19 +5,17 @@ import './NavBar.css';
 
 const NavBar = () => {
   const [cartCount, setCartCount] = useState(0);
-  const location = useLocation(); // Obtener la ruta actual
+  const location = useLocation();
   const { getItemCount } = useCart();
 
-  // Cargar cantidad de productos del carrito desde localStorage al iniciar
   // useEffect(() => {
   //   const cart = JSON.parse(localStorage.getItem('cart')) || []; // Obtener carrito desde localStorage
-  //   setCartCount(cart.length); // Establecer la cantidad de productos en el carrito
-  // }, []); // Solo se ejecuta una vez al montar el componente
+  //   setCartCount(cart.length); 
+  // }, []); 
 
-  // // Función para actualizar el carrito
   // const updateCartCount = (newCart) => {
   //   localStorage.setItem('cart', JSON.stringify(newCart)); // Guardar el carrito en localStorage
-  //   setCartCount(newCart.length); // Actualizar el estado de cartCount
+  //   setCartCount(newCart.length); 
   // };
 
   return (
