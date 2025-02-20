@@ -1,7 +1,31 @@
 .card{
-    width: 18rem;
+    width: 22rem;
     height: 14rem;
     margin: 1rem;
     background-color: aquamarine;
+    display: flex;
+}
+
+.phoneImageContainer{
+    flex: 1;
+    height: 100%;
+    width: 10rem;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phoneImage{
+    width: 9rem;
+}
+
+.phoneDetail{
+    flex: 1;
+    height: 100%;
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 

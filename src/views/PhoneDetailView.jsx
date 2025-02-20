@@ -17,7 +17,6 @@ const PhoneDetailView = () => {
       const data = await fetchPhoneDetail(id);
       if (data) {
         setPhoneDetail(data);
-        console.log(data)
       } else {
         setError('No se pudieron obtener los detalles del teléfono');
       }

@@ -18,7 +18,7 @@ export const Cart = () => {
                 <h2 className={styles.cartItems}>CART ({getItemCount()})</h2>
                 <div className={styles.phoneCards}>
                     {cartItems.map((phone, index) => (
-                        <PhoneCardCart></PhoneCardCart>
+                        <PhoneCardCart phone={phone} key={phone+index}></PhoneCardCart>
                     ))}
                 </div>
             </div>

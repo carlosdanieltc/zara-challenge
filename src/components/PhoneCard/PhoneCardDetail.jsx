@@ -11,13 +11,15 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   const basePrice = phoneDetail.basePrice
 
   const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedColorName, setSelectedColorName] = useState(null);
   const [selectedStorage, setSelectedStorage] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState(storageOptions[0].price);
 
   const { addPhoneToCart } = useCart();
 
-  const handleColorChange = (newColor) => {
+  const handleColorChange = (newColor, newColorName) => {
     setSelectedColor(newColor);
+    setSelectedColorName(newColorName)
   };
 
   const handleStorageChange = (storage, price) => {
@@ -30,7 +32,8 @@ const PhoneCardDetail = ({ phoneDetail }) => {
       const selectedPhone = {
         name,
         price: selectedPrice,
-        color: selectedColor,
+        colorImage: selectedColor,
+        colorName: selectedColorName,
         storage: selectedStorage,
       };
       addPhoneToCart(selectedPhone);
@@ -65,15 +68,15 @@ const PhoneCardDetail = ({ phoneDetail }) => {
 
         <p>COLOR. PICK YOUR FAVORITE</p>
         <div className={styles.colorOptionsContainer}>
-          {colorOptions.map((item, index) => (
+          {colorOptions.map((item, index) => (           
             <label key={item.name} className={styles.colorOption} style={{ backgroundColor: item.hexCode }}>
               <input 
                 className={styles.inputPhone}
                 type="radio"
                 name="color"
-                value={item.name}
+                value={item.name} //Nombre color del tlf
                 checked= {selectedColor === item.imageUrl}
-                onChange={() => handleColorChange(item.imageUrl)} 
+                onChange={() => handleColorChange(item.imageUrl, item.name)} 
               />             
             </label>
           ))}
