@@ -12,7 +12,12 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addPhoneToCart = (phone) => {
-    setCartItems((prevItems) => [...prevItems, phone]);
+    const newPhone = { ...phone, id: phone.id || crypto.randomUUID() }
+    setCartItems((prevItems) => [...prevItems, newPhone]);
+  };
+
+  const removePhoneFromCart = (phoneId) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== phoneId));
   };
 
   const getTotal = () => {
@@ -24,7 +29,7 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addPhoneToCart, getTotal, getItemCount }}>
+    <CartContext.Provider value={{ cartItems, addPhoneToCart, getTotal, getItemCount, removePhoneFromCart }}>
       {children}
     </CartContext.Provider>
   );

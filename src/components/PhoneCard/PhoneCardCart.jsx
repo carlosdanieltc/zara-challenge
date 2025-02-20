@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 
 export const CardCart = ({ phone }) => {
 
+    const { removePhoneFromCart } = useCart();
+
+    const handleRemove = () => {
+        removePhoneFromCart(phone.id);
+    };
+
     return (
         <div className={styles.card}>
             <div className={styles.phoneImageContainer}>
@@ -14,11 +20,11 @@ export const CardCart = ({ phone }) => {
             </div>
             <div className={styles.phoneDetail}>
                 <div className={styles.phoneDetailContainer}>
-                    <p>{phone.name}</p>
-                    <p>{phone.storage} | {phone.colorName}</p>
+                    <p className={styles.phoneP}>{phone.name}</p>
+                    <p className={styles.phoneP}>{phone.storage} | {phone.colorName}</p>
                     <p>{phone.price} EUR</p>
                 </div>
-                <button className={styles.deleteButton}>Eliminar</button>
+                <button className={styles.deleteButton} onClick={handleRemove}>Eliminar</button>
             </div>
         </div>
     );

@@ -10,19 +10,18 @@
 }
 
 .imgContainer{
-    width: 80%; /* Las imágenes ocuparán el 80% del ancho del contenedor */
-    height: 100%; /* Altura del contenedor de la imagen */
+    width: 100%; 
+    height: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobrepase el contenedor */
+    overflow: hidden; 
 }
 
 .phoneImage{
-    width: 100%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
-    height: 170px; /* Establece una altura consistente para todas las imágenes */
-    object-fit: contain; /* Mantiene la proporción de la imagen sin deformarla y la recorta si es necesario */
-    /* background-color: aqua; */
+    width: 100%; 
+    height: 170px; 
+    object-fit: contain; 
 }
 
 .phoneInfo{

@@ -13,7 +13,7 @@ const PhoneCard = ({ phone }) => {
           <h4 className={styles.phoneName}>{phone.name}</h4>
         </div>
         <div className={styles.priceContainer}>
-          <p className={styles.price}>{`$${phone.basePrice}`}</p>
+          <p className={styles.price}>{`${phone.basePrice} EUR`}</p>
         </div>
       </div>
     </div>

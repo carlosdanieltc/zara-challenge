@@ -12,8 +12,12 @@
     width: 50%;
 }
 
-.image{
-    height: 28rem;
+.phoneImage{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    background-color: white;
+    
 }
 
 .phoneInfo{

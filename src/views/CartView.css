@@ -12,7 +12,6 @@ html, body{
 }
 
 .cart-items-container{
-    background-color: blueviolet;
     height: 85%;
 }
 
@@ -32,7 +31,6 @@ html, body{
 }
 
 .cart-options{
-    background-color: brown;
     height: 15%;
     display: flex;
     justify-content: space-between;

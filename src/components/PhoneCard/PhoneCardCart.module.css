@@ -2,7 +2,6 @@
     width: 22rem;
     height: 14rem;
     margin: 1rem;
-    background-color: aquamarine;
     display: flex;
 }
 
@@ -10,7 +9,6 @@
     flex: 1;
     height: 100%;
     width: 10rem;
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +21,20 @@
 .phoneDetail{
     flex: 1;
     height: 100%;
-    background-color: violet;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    box-sizing: border-box;
 }
 
+.deleteButton{
+    all: unset;
+    cursor: pointer;
+    color: red;
+}
+
+.phoneP{
+    margin: 0;
+}

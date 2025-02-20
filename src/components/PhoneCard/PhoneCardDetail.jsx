@@ -8,6 +8,7 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   const storageOptions = phoneDetail.storageOptions;
   const colorOptions = phoneDetail.colorOptions
   const name = phoneDetail.name
+  const id = phoneDetail.id
   const basePrice = phoneDetail.basePrice
 
   const [selectedColor, setSelectedColor] = useState(null);
@@ -43,7 +44,7 @@ const PhoneCardDetail = ({ phoneDetail }) => {
   return (
     <div className={styles.phoneCardDetail}>
       <div className={styles.phoneImgContainer}>
-        <img className={styles.image} src={selectedColor ?? colorOptions[0].imageUrl} alt="" />
+        <img className={styles.phoneImage} src={selectedColor ?? colorOptions[0].imageUrl} alt="" />
       </div>
       <div className={styles.phoneInfo}>
         <h1>{name}</h1>

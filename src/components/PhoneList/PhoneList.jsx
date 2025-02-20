@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import { fetchPhones } from '../../services/phoneService';
 
 const PhoneList = () => {
-  const [phones, setPhones] = useState([]); // Estado para almacenar los teléfonos filtrados
-  const [allPhones, setAllPhones] = useState([]); // Estado para almacenar todos los teléfonos sin filtrar
-  const [searchQuery, setSearchQuery] = useState(''); // Estado para manejar el término de búsqueda
+  const [phones, setPhones] = useState([]); 
+  const [allPhones, setAllPhones] = useState([]); 
+  const [searchQuery, setSearchQuery] = useState(''); 
 
   useEffect(() => {
     const getPhones = async () => {
@@ -20,29 +20,28 @@ const PhoneList = () => {
     getPhones(); 
   }, []); 
 
-  // Implementación del debounce
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (searchQuery === '') {
-        setPhones(allPhones); // Si no hay búsqueda, mostrar todos los teléfonos
+        setPhones(allPhones); 
       } else {
         const filteredPhones = allPhones.filter(phone =>
           phone.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           phone.brand.toLowerCase().includes(searchQuery.toLowerCase())
         );
-        setPhones(filteredPhones); // Mostrar los teléfonos filtrados
+        setPhones(filteredPhones); 
       }
     }, 300); 
 
     return () => clearTimeout(delayDebounceFn); // Limpiar el timeout si se actualiza el searchQuery
-  }, [searchQuery, allPhones]); // Dependencia de searchQuery y allPhones
+  }, [searchQuery, allPhones]); 
 
   return (
     <div>
       <SearchBar setSearchQuery={setSearchQuery} totalPhones={phones.length} />
       <div className="phone-grid">
         {phones.map(phone => (
-          <Link to={`/phone/${phone.id}`} key={phone.id}>
+          <Link to={`/phone/${phone.id}`} key={phone.id} className='linkTo'>
             <PhoneCard phone={phone} />
           </Link>
         ))}
