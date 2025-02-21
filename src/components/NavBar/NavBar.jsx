@@ -4,19 +4,8 @@ import { useCart } from '../../context/CartContext'
 import './NavBar.css';
 
 const NavBar = () => {
-  const [cartCount, setCartCount] = useState(0);
   const location = useLocation();
   const { getItemCount } = useCart();
-
-  // useEffect(() => {
-  //   const cart = JSON.parse(localStorage.getItem('cart')) || []; // Obtener carrito desde localStorage
-  //   setCartCount(cart.length); 
-  // }, []); 
-
-  // const updateCartCount = (newCart) => {
-  //   localStorage.setItem('cart', JSON.stringify(newCart)); // Guardar el carrito en localStorage
-  //   setCartCount(newCart.length); 
-  // };
 
   return (
     <nav className={`navbar ${location.pathname === '/cart' ? 'navbar-cart' : ''}`}>
