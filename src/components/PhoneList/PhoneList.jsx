@@ -33,7 +33,7 @@ const PhoneList = () => {
       }
     }, 300); 
 
-    return () => clearTimeout(delayDebounceFn); // Limpiar el timeout si se actualiza el searchQuery
+    return () => clearTimeout(delayDebounceFn); 
   }, [searchQuery, allPhones]); 
 
   return (

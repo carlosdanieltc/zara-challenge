@@ -4,6 +4,7 @@ import { fetchPhoneDetail } from '../services/phoneService';
 import styles from './PhoneDetailView.module.css';
 import PhoneCardDetail from '../components/PhoneCard/PhoneCardDetail'
 import PhoneSpecifications from '../components/PhoneSpecifications/PhoneSpecifications'
+import SimilarItems from '../components/SimilarItems/SimilarItems'
 
 const PhoneDetailView = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const PhoneDetailView = () => {
 
     getPhoneDetail();
 
-  }, []);
+  }, [id]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -44,6 +45,7 @@ const PhoneDetailView = () => {
           </Link>
           <PhoneCardDetail phoneDetail={phoneDetail} />
           <PhoneSpecifications phoneDetail={phoneDetail}></PhoneSpecifications>
+          <SimilarItems key={id} phoneDetail={phoneDetail}></SimilarItems>
         </>
       )}
     </div>

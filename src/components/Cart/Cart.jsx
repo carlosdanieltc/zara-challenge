@@ -18,7 +18,7 @@ export const Cart = () => {
                 <h2 className={styles.cartItems}>CART ({getItemCount()})</h2>
                 <div className={styles.phoneCards}>
                     {cartItems.map((phone, index) => (
-                        <PhoneCardCart phone={phone} key={phone+index}></PhoneCardCart>
+                        <PhoneCardCart phone={phone} key={phone + index}></PhoneCardCart>
                     ))}
                 </div>
             </div>
@@ -30,10 +30,15 @@ export const Cart = () => {
                 </Link>
 
                 <div className={styles.payContainer}>
-                    <p>
-                        <span style={{ marginRight: '20px' }}>TOTAL</span> {getTotal()} EUR
-                    </p>
-                    <button className={styles.buttonPay}>PAY</button>
+                    {getItemCount() > 0 && (
+                        <>
+                            <p>
+                                <span style={{ marginRight: '20px' }}>TOTAL</span> {getTotal()} EUR
+                            </p>
+                            <button className={styles.buttonPay}>PAY</button>
+                        </>
+                    )}
+
                 </div>
             </div>
         </div>

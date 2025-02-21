@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 const PhoneCardDetail = ({ phoneDetail }) => {
 
+  // console.log(phoneDetail)
+
   const storageOptions = phoneDetail.storageOptions;
   const colorOptions = phoneDetail.colorOptions
   const name = phoneDetail.name
