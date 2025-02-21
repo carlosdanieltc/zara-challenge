@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
     <CartProvider>
-      <Router >
+      <Router>
         <NavBar />
         <div className="main-content">
           <Routes>
