@@ -69,3 +69,40 @@ html, body{
     flex-wrap: wrap;
     overflow-x: auto;
 }
+
+@media (max-width: 768px) {
+    .backButtonContainer{
+        height: 4rem;
+        width: 8rem;
+    } 
+
+    .payContainer{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+    }
+
+    .buttonPay{
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        height: 4rem;
+        width: 8rem;
+    }
+
+    .cartItems{
+        z-index: 25;
+        margin-top: 25%;
+        font-size: 1rem;
+    }
+
+    .phoneCards{
+        padding-right: 2rem;
+    } 
+
+    .cartOptions{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

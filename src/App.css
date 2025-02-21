@@ -6,3 +6,10 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
 }
+
+@media (max-width: 768px) {
+  .main-content{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}

@@ -25,3 +25,15 @@
     align-items: center;
     border-bottom: 1px solid black;
 }
+
+@media (max-width: 768px) {
+    .phone-specifications-container {
+        margin-top: 15rem;
+        font-size: 0.8rem;
+        margin-bottom: 4rem;
+    }
+
+    .data-title{
+        margin-right: 3rem;
+    }
+}
