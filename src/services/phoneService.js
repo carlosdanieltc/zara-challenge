@@ -12,13 +12,13 @@ export const fetchPhones = async () => {
       }
   
       const data = await response.json();
-      const uniquePhones = Array.from(new Map(data.map(phone => [phone.id, phone])).values()); // Filtrar teléfonos duplicados
-      const limitedPhones = uniquePhones.slice(0, 20); // Limitar a 20 teléfonos
+      const uniquePhones = Array.from(new Map(data.map(phone => [phone.id, phone])).values()); 
+      const limitedPhones = uniquePhones.slice(0, 20); 
   
       return limitedPhones;
     } catch (error) {
       console.error('Hubo un error al obtener los datos:', error);
-      return []; // Si hay error, devolvemos un array vacío
+      return []; 
     }
   };
 
@@ -39,6 +39,6 @@ export const fetchPhones = async () => {
       return phoneDetail;
     } catch (error) {
       console.error('Error al obtener los detalles del teléfono:', error);
-      return null; // Devolvemos null si ocurre un error
+      return null; 
     }
   };

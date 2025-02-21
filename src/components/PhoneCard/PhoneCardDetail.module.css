@@ -43,7 +43,6 @@
     justify-content: center;
     align-items: center;
     width: 6rem;
-    /* transition: background 0.3s, color 0.3s; */
   }
 
 .inputPhone{
@@ -62,8 +61,8 @@
     height: 100%;
     width: 1rem;
     cursor: pointer;
-    outline: 2px solid #b5b5b5; /* Borde externo */
-    outline-offset: 2px; /* Distancia entre el borde y el div */
+    outline: 2px solid #b5b5b5; 
+    outline-offset: 2px; 
     margin-right: 1rem;
 }
 
@@ -76,7 +75,7 @@
 }
 
 .buttonAddToCart:active{
-    transform: scale(0.99); /* Hace un pequeño "click" */
+    transform: scale(0.99); 
     transition: transform 0.1s ease-in-out;
 }
 

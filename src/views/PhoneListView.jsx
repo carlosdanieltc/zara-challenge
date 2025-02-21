@@ -4,7 +4,7 @@ import PhoneList from '../components/PhoneList/PhoneList';
 const PhoneListView = () => {
   return (
     <div>
-      <PhoneList /> {/* Lista de teléfonos */}
+      <PhoneList /> 
     </div>
   );
 }

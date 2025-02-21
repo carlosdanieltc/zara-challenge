@@ -3,7 +3,6 @@
     width: auto;
     margin-bottom: 100px;
     display: flex;
-    /* border-top: 1px solid black; */
     border-left: 1px solid black;
     overflow-x: auto;
     white-space: nowrap;

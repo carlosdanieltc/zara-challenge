@@ -4,10 +4,9 @@ import styles from './SearchBar.module.css'
 const SearchBar = ({ setSearchQuery, totalPhones }) => {
   const [query, setQuery] = useState('');
 
-  // Maneja el cambio en el campo de búsqueda
   const handleSearchChange = (event) => {
-    setQuery(event.target.value); // Actualiza el estado del input
-    setSearchQuery(event.target.value); // Pasa el valor al componente padre (PhoneList)
+    setQuery(event.target.value); 
+    setSearchQuery(event.target.value); 
   };
 
   return (

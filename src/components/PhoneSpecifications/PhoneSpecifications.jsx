@@ -1,55 +1,30 @@
 import React from 'react';
-import './PhoneSpecifications.css'
+import './PhoneSpecifications.css';
 
 const PhoneSpecifications = ({ phoneDetail }) => {
+  const specifications = [
+    { title: 'BRAND', value: phoneDetail.brand },
+    { title: 'NAME', value: phoneDetail.name },
+    { title: 'DESCRIPTION', value: phoneDetail.description },
+    { title: 'SCREEN', value: phoneDetail.specs.screen },
+    { title: 'RESOLUTION', value: phoneDetail.specs.resolution },
+    { title: 'PROCESSOR', value: phoneDetail.specs.processor },
+    { title: 'MAIN CAMERA', value: phoneDetail.specs.mainCamera },
+    { title: 'SELFIE CAMERA', value: phoneDetail.specs.selfieCamera },
+    { title: 'BATTERY', value: phoneDetail.specs.battery },
+    { title: 'OS', value: phoneDetail.specs.os },
+    { title: 'SCREEN REFRESH RATE', value: phoneDetail.specs.screenRefreshRate },
+  ];
+
   return (
     <div className="phone-specifications-container">
-      <div className='specificatio-container'></div>
-      <h2 className='specifications-title'>SPECIFICATIONS</h2>
-      <div className='specification'>
-        <h3 className='data-title'>BRAND</h3>
-        <p className='data'>{phoneDetail.brand}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>NAME</h3>
-        <p className='data'>{phoneDetail.name}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>DESCRIPTION</h3>
-        <p className='data'>{phoneDetail.description}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>SCREEN</h3>
-        <p className='data'>{phoneDetail.specs.screen}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>RESOLUTION</h3>
-        <p className='data'>{phoneDetail.specs.resolution}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>PROCESSOR</h3>
-        <p className='data'>{phoneDetail.specs.processor}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>MAIN CAMERA</h3>
-        <p className='data'>{phoneDetail.specs.mainCamera}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>SELFIE CAMERA</h3>
-        <p className='data'>{phoneDetail.specs.selfieCamera}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>BATTERY</h3>
-        <p className='data'>{phoneDetail.specs.battery}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>OS</h3>
-        <p className='data'>{phoneDetail.specs.os}</p>
-      </div>
-      <div className='specification'>
-        <h3 className='data-title'>SCREEN REFRESH RATE</h3>
-        <p className='data'>{phoneDetail.specs.screenRefreshRate}</p>
-      </div>
+      <h2 className="specifications-title">SPECIFICATIONS</h2>
+      {specifications.map(({ title, value }) => (
+        <div className="specification" key={title}>
+          <h3 className="data-title">{title}</h3>
+          <p className="data">{value}</p>
+        </div>
+      ))}
     </div>
   );
 };

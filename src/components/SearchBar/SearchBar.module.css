@@ -16,9 +16,9 @@
   
 .searchInput{
     width: 100%; 
-    padding: 1%; /* Relleno dentro de la caja de texto */
-    border: none; /* Sin bordes por defecto */
-    outline: none; /* Elimina el contorno al hacer foco */
+    padding: 1%;
+    border: none;
+    outline: none;
 }
 
 .total-phones{

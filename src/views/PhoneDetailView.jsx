@@ -8,9 +8,9 @@ import SimilarItems from '../components/SimilarItems/SimilarItems'
 
 const PhoneDetailView = () => {
   const { id } = useParams();
-  const [phoneDetail, setPhoneDetail] = useState(null); // Estado para almacenar los detalles del teléfono
-  const [loading, setLoading] = useState(true); // Estado de carga para mostrar un cargando mientras obtenemos los datos
-  const [error, setError] = useState(null); // Estado para manejar errores
+  const [phoneDetail, setPhoneDetail] = useState(null); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const getPhoneDetail = async () => {

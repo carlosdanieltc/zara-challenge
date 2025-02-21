@@ -15,7 +15,6 @@ export const CardCart = ({ phone }) => {
     return (
         <div className={styles.card}>
             <div className={styles.phoneImageContainer}>
-                {console.log(phone)}
                 <img src={phone.colorImage} alt={phone.name} className={styles.phoneImage} />
             </div>
             <div className={styles.phoneDetail}>
