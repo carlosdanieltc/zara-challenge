@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
     <CartProvider>
-      <Router basename="/zara-challenge">
+      <Router basename={import.meta.env.BASE_URL}>
         <NavBar />
         <div className="main-content">
           <Routes>
