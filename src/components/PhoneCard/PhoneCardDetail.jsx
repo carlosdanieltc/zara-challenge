@@ -55,7 +55,8 @@ const PhoneCardDetail = ({ phoneDetail }) => {
 
         <div className={styles.storageContainer}>
           {storageOptions.map((item, index) => (
-            <label key={item.capacity} className={styles.storageOption}>
+            <label key={item.capacity} className={styles.storageOption} 
+            style={{border: selectedStorage === item.capacity ? '1px solid black' : ''}}>
               <input
                 className={styles.inputPhone}
                 type="radio"
@@ -72,12 +73,18 @@ const PhoneCardDetail = ({ phoneDetail }) => {
         <p>COLOR. PICK YOUR FAVORITE</p>
         <div className={styles.colorOptionsContainer}>
           {colorOptions.map((item, index) => (           
-            <label key={item.name} className={styles.colorOption} style={{ backgroundColor: item.hexCode }}>
+            <label key={item.name} 
+            className={styles.colorOption} 
+            style={
+              { 
+                backgroundColor: item.hexCode,
+                border: selectedColor === item.imageUrl ? '1px solid black' : '', 
+              }}>
               <input 
                 className={styles.inputPhone}
                 type="radio"
                 name="color"
-                value={item.name} //Nombre color del tlf
+                value={item.name} //Nombre del color del tlf
                 checked= {selectedColor === item.imageUrl}
                 onChange={() => handleColorChange(item.imageUrl, item.name)} 
               />             
