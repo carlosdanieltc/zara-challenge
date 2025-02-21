@@ -9,12 +9,12 @@ const NavBar = () => {
   return (
     <nav className={`navbar ${location.pathname === '/cart' ? 'navbar-cart' : ''}`}>
       <Link to="/" className="logo-container">
-        <img className='logo' src="../../src/assets/logo.png" alt="logo" />
+        <img className='logo' src={`${import.meta.env.BASE_URL}logo.png`} alt="logo" />
       </Link>
 
       {location.pathname !== '/cart' && (
         <Link to="/cart" className='shopping-cart-container'>
-          <img className='shopping-cart' src="../../src/assets/shopping-cart-icon.webp" alt="Carrito" />
+          <img className='shopping-cart' src={`${import.meta.env.BASE_URL}shopping-cart-icon.webp`} alt="Carrito" />
           <span className="cart-count">{getItemCount()}</span>
         </Link>
       )}
@@ -23,3 +23,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
