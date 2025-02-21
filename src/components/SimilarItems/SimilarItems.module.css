@@ -3,7 +3,7 @@
     width: auto;
     margin-bottom: 100px;
     display: flex;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     border-left: 1px solid black;
     overflow-x: auto;
     white-space: nowrap;
@@ -21,4 +21,6 @@
     text-decoration: none;
     color: inherit;
     flex: 0 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }

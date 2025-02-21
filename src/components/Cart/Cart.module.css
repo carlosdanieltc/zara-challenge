@@ -32,11 +32,13 @@ html, body{
     height: 15%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 2%;
     box-sizing: border-box;
 }
 
 .backButtonContainer{
+    all: unset;
     display: flex;
     height: 100%;
     width: 15rem;
@@ -53,6 +55,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .buttonPay{
@@ -70,16 +73,45 @@ html, body{
     overflow-x: auto;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cartItemsContainer{
+        height: 90%;
+    }
+
+    .cartOptions{
+        height: 10%;
+    }
+
+    .cartItems{
+        margin-top: 15%;
+        font-size: 2rem;
+    }
+
+    .backButtonContainer{
+        width: 17rem;
+    }
+    
+    .backButton{
+       width: 17rem;
+    }
+
+    .buttonPay{
+        width: 17rem;
+    }
+  }
+
+
 @media (max-width: 768px) {
     .backButtonContainer{
         height: 4rem;
-        width: 8rem;
+        width: 48%;
     } 
 
     .payContainer{
         display: flex;
         flex-direction: column;
-        margin-right: 1rem;
+        align-items: center;
+        width: 48%;
     }
 
     .buttonPay{
@@ -87,7 +119,8 @@ html, body{
         background-color: black;
         cursor: pointer;
         height: 4rem;
-        width: 8rem;
+        width: 100%;
+        margin-left: 0;
     }
 
     .cartItems{
@@ -103,6 +136,7 @@ html, body{
     .cartOptions{
         display: flex;
         justify-content: space-between;
+        align-items: end;
+        padding: 1;
     }
-
 }

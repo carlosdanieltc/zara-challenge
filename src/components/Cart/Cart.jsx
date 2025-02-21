@@ -23,23 +23,20 @@ export const Cart = () => {
                 </div>
             </div>
             <div className={styles.cartOptions}>
-                <Link to="/">
-                    <div className={styles.backButtonContainer}>
-                        <button className={styles.backButton}>CONTINUE SHOPPING</button>
-                    </div>
+                <Link to="/" className={styles.backButtonContainer}>
+                    <button className={styles.backButton}>CONTINUE SHOPPING</button>
                 </Link>
 
-                <div className={styles.payContainer}>
-                    {getItemCount() > 0 && (
-                        <>
-                            <p>
-                                <span style={{ marginRight: '20px' }}>TOTAL</span> {getTotal()} EUR
-                            </p>
-                            <button className={styles.buttonPay}>PAY</button>
-                        </>
-                    )}
+                {getItemCount() > 0 && (
+                    <div className={styles.payContainer}>
+                        <p>
+                            <span style={{ marginRight: '20px' }}>TOTAL</span> {getTotal()} EUR
+                        </p>
+                        <button className={styles.buttonPay}>PAY</button>
+                    </div>
+                )}
 
-                </div>
+
             </div>
         </div>
     );

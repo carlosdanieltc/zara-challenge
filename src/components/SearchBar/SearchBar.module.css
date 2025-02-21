@@ -24,3 +24,12 @@
 .total-phones{
   padding-left: 1rem;
 }
+
+@media (max-width: 1200px) {
+  .navbar{}
+}
+
+@media (max-width: 768px) {
+
+}
+

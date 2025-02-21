@@ -1,11 +1,11 @@
-.card{
+.card {
     width: 22rem;
     height: 14rem;
     margin: 1rem;
     display: flex;
 }
 
-.phoneImageContainer{
+.phoneImageContainer {
     flex: 1;
     height: 100%;
     width: 10rem;
@@ -14,11 +14,12 @@
     align-items: center;
 }
 
-.phoneImage{
-    width: 9rem;
+.phoneImage {
+    width: auto;
+    height: 10rem;
 }
 
-.phoneDetail{
+.phoneDetail {
     flex: 1;
     height: 100%;
     display: flex;
@@ -29,12 +30,34 @@
     box-sizing: border-box;
 }
 
-.deleteButton{
+.deleteButton {
     all: unset;
     cursor: pointer;
     color: red;
 }
 
-.phoneP{
+.phoneP {
     margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 44rem;
+        height: 18rem;
+    }
+
+    .phoneImage {
+        height: 16rem;
+        width: auto;
+    }
+
+    .phoneDetail {
+        height: 80%;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
 }
