@@ -35,8 +35,6 @@ export const Cart = () => {
                         <button className={styles.buttonPay}>PAY</button>
                     </div>
                 )}
-
-
             </div>
         </div>
     );

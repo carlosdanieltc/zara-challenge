@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 91%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   justify-content: space-between;
   height: 4rem;
